@@ -1,0 +1,11 @@
+127.0.0.1 - - [17/Oct/2017 11:56:24] "GET /webserver.html HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:56:25] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:57:03] "GET /info/ HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2017 11:57:04] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:58:41] "GET /webserver.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2017 11:58:41] "GET /webserver.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2017 11:58:41] "GET /webserver.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2017 11:58:41] "GET /webserver.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2017 11:58:42] "GET /webserver.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2017 11:59:11] "POST /webserver.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2017 11:59:12] "GET /favicon.ico HTTP/1.1" 500 -

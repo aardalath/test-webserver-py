@@ -1,0 +1,7 @@
+127.0.0.1 - - [17/Oct/2017 11:54:49] "GET / HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:54:50] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:54:57] "GET /webserver.html HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:54:57] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:55:07] "GET /webserver.html HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:55:08] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [17/Oct/2017 11:55:15] "GET /favicon.ico HTTP/1.1" 500 -
