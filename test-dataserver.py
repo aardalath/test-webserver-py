@@ -96,6 +96,9 @@ import urllib
 import shutil
 import glob
 
+from SocketServer import ThreadingMixIn
+import threading
+
 try:
     from cStringIO import StringIO
 except ImportError:
@@ -104,6 +107,12 @@ except ImportError:
 from astropy.io import fits
 import numpy as np
 
+
+class ThreadedHTTPServer(ThreadingMixIn, BaseHTTPServer.HTTPServer):
+    """ This class allows to handle requests in separated threads.
+        No further content needed, don't touch this. """
+
+
 def make_request_handler_class(opts):
     '''
     Factory to make the request handler and add arguments to it.
@@ -111,6 +120,7 @@ def make_request_handler_class(opts):
     It exists to allow the handler to access the opts.path variable
     locally.
     '''
+
     class QLARqstHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         '''
         Factory generated request handler class that contain
@@ -598,7 +608,8 @@ def httpd(opts):
     HTTP server
     '''
     RequestHandlerClass = make_request_handler_class(opts)
-    server = BaseHTTPServer.HTTPServer((opts.host, opts.port), RequestHandlerClass)
+    # server = BaseHTTPServer.HTTPServer((opts.host, opts.port), RequestHandlerClass)
+    server = ThreadedHTTPServer((opts.host, opts.port), RequestHandlerClass)
     logging.info('Server starting %s:%s (level=%s)' % (opts.host, opts.port, opts.level))
     try:
         server.serve_forever()
